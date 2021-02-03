@@ -1,5 +1,16 @@
 // customize some Bootstrap variables
 $primary: darken(#428bca, 20%);
+$light: #5ebfe5;
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
+
+#main {
+  position:relative
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
