@@ -6,11 +6,48 @@ $light: #5ebfe5;
 @import "~bootstrap/scss/bootstrap";
 
 #main {
-  position:relative
+  position:relative;;
 }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  margin-top:50px;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.mainTitle, .homeCategories {
+  text-align: center;
+}
+#banner {
+  display: none;
+}
+
+.cardsContainer{
+  align-items:  center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+
+  #banner {
+    display: block;
+    width: 100%;
+  }
+
+  .bannerImage {
+    width: 100%;
+  }
+
+  .cardsContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
 }
