@@ -1,5 +1,23 @@
 {% extends 'base.html.twig' %}
 {% block title %}Vive le Bugey Libre{% endblock %}
     {% block body %}
-        <h1>Welcome Bugiste</h1>
+            <div id="banner" class="flex">
+                        <img src="{{ asset('build/images/homeBanner.jpg') }}" alt="bannerimage" class="bannerImage">
+            </div>
+
+        <h1 class="mainTitle">Bienvenue Apprenti bugiste!</h1>
+        <h3 class= "homeCategories">Nos categories</h3>
+
+        <div class="cardsContainer flex">
+            {% for category in categories %}
+                <div class="card "style="width: 18rem;">
+                    <img class="card-img-top" src="{{ category.picture}}" alt="Category image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ category.title }}</h5>
+                        <p class="card-text">{{ category.summary }}</p>
+                        <a href="#" class="btn btn-primary">Voir la catégorie</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     {% endblock %}

@@ -14,8 +14,8 @@
             {% include '_navbar.html.twig' %}
             </header>
             {% block body %}{% endblock %}
+            {#{% include '_footer.html.twig' %} #}
         </div>
-        {% include '_footer.html.twig' %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
