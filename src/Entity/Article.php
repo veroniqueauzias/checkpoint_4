@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -19,20 +20,27 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ne m'oublie pas!")
+     * @Assert\Length(max="255", maxMessage="Pas plus de 255 caractères!")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Ne m'oublie pas!")
+     * @Assert\Length(max="255", maxMessage="Pas plus de 255 caractères!")
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ne m'oublie pas!")
+     * @Assert\Length(max="255", maxMessage="Pas plus de 255 caractères!")
      */
     private $picture;
 
     /**
+     * @Assert\NotBlank(message="Ne m'oublie pas!")
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="articles")
      * @ORM\JoinColumn(nullable=false)
      */

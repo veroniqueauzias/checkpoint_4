@@ -2,5 +2,8 @@
 {% block title %}categories{% endblock %}
 {% block body %}
     <h1 class="categoryTitle">Tous nos articles</h1>
+    <div class="addButtonContainer flex">
+    <a class="btn btn-primary addButton" href="{{ path('newArticle') }}" role="button">Ajoutez un article</a>
+    </div>
     {% include '_articles.html.twig' %}
 {% endblock %}
