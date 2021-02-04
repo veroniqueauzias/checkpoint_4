@@ -23,6 +23,9 @@ footer {
 
 .mainTitle, .homeCategories, .categoryTitle {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
 }
 #banner {
   display: none;
@@ -33,10 +36,6 @@ footer {
   flex-direction: column;
 }
 
-.categoryTitle {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
 
 @media (min-width: 768px) {
 
