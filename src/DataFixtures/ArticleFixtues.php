@@ -25,7 +25,7 @@ class ArticleFixtues extends Fixture implements DependentFixtureInterface
         ],
         'Ramequin' => [
             'content' => 'Allez à la fromagerie de St Rambert en Bugey, achetez du ramequin, faites-en une fondue et crachez vos tripes',
-            'picture' => 'https://lh3.googleusercontent.com/proxy/3DveVQh7bKsOpxZPRWiMtW8WXwHFFOr8_7balHh8TMlUNYZsvz3YVBJI6tddiadVvOkla8-IEzA_8w0RcfDVphA2YApUtGauDjEk8sy8kg9VACadNnY',
+            'picture' => 'https://www.laiterielacotiere.fr/photos/20180409_ramequin-du-bugey-2.jpg.jpg',
             'category' => 'Spécialités',
         ],
         'Galette' => [
@@ -40,7 +40,7 @@ class ArticleFixtues extends Fixture implements DependentFixtureInterface
         ],
         'Hotel à Evosges' => [
             'content' => 'c\'est super beau',
-            'picture' => 'https://lh3.googleusercontent.com/proxy/r8GJ0ZHtNpd7Iu_U48Aa7aDAGET6NhLNon9IAyIPTis9geL_iDigOaNzimgimxF3BijJu6KLGZOOfeDiIKBcTg0uxgjZ3_3WHXNcmQstuyYao9lfMXUCKyu_q2Kz8XB7YT-xGOtGn4JUAMW1JA',
+            'picture' => 'https://lh3.googleusercontent.com/proxy/fyiKf_hzJeZFk8D0UQPFU8qrgroxrtKexxxUSnXCXKWK9iEokWOz0Rx0saCzyOGtNgDl-dREpoCNFQ9ctjDcStuRcSa2y8lGXPMQI0rc-a2Cux56_kq25MbBuFdC6jTe',
             'category' => 'Structures à contacter'
         ],
     ];
