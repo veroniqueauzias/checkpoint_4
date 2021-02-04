@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Ajoute un article {% endblock %}
+
+
+{% block body %}
+    <h1 class="mainTitle">Ajoute un article</h1>
+    <div class="form-group flex">
+    {{ form_start(form) }}
+        <div class="errors">
+            {{ form_errors(form) }}
+        </div>
+    {{ form_row(form.title, {'label' : "Titre de l'article"}) }}
+    {{ form_row(form.content, {'label' : "Votre article"}) }}
+    {{ form_row(form.picture, {'label' : "Entrez l'url d'une image"}) }}
+    {{ form_row(form.category, {'label' : "Sélectionnez une catégorie"}) }}
+
+
+        <input type='submit' class="btn btn-primary" value='ajoute un article'>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}
