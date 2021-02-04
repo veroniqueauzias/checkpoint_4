@@ -3,6 +3,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Article;
 use App\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -25,6 +26,7 @@ class CategoryFixtures extends Fixture
         ],
     ];
 
+
     public function load(ObjectManager $manager)
     {
         foreach (self::CATEGORIES as $title => $data) {
@@ -33,6 +35,7 @@ class CategoryFixtures extends Fixture
             $category->setSummary($data ['summary']);
             $category->setPicture($data['picture']);
             $manager->persist($category);
+            $this->addReference('category_' .  $title, $category);
         }
 
         $manager->flush();
