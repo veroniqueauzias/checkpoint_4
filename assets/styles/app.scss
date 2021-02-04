@@ -1,6 +1,8 @@
 // customize some Bootstrap variables
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 $primary: darken(#428bca, 20%);
 $light: #5ebfe5;
+$font-family-base: 'Yusei Magic', sans-serif;
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
