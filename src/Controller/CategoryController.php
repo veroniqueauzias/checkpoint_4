@@ -7,6 +7,7 @@ use App\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 class CategoryController extends AbstractController
@@ -15,7 +16,7 @@ class CategoryController extends AbstractController
      * @Route ("/categories", name="categories")
      * @return Response
      */
-    public function showCategories(): Response
+    public function index(): Response
     {
         $catetories = $this->getDoctrine()
             ->getRepository(Category::class)
@@ -25,4 +26,24 @@ class CategoryController extends AbstractController
             'categories' => $catetories
         ]);
     }
+
+    /**
+     * @Route("/category/{id}", name="categorie")
+     * @param int $id
+     * @return Response
+     */
+    public function showCategory(int $id): Response
+    {
+        $category = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->find($id);
+        if(!$category)
+            throw new NotFoundHttpException('Cette catégorie n\'existe pas');
+
+        return $this->render('category.html.twig', [
+            'category' => $category,
+        ]);
+    }
+
+
 }

@@ -21,8 +21,11 @@ footer {
 }
 
 
-.mainTitle, .homeCategories {
+.mainTitle, .homeCategories, .categoryTitle {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
 }
 #banner {
   display: none;
@@ -32,6 +35,7 @@ footer {
   align-items:  center;
   flex-direction: column;
 }
+
 
 @media (min-width: 768px) {
 
