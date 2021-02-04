@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Article;
 use App\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -40,8 +41,13 @@ class CategoryController extends AbstractController
         if(!$category)
             throw new NotFoundHttpException('Cette catégorie n\'existe pas');
 
+        $articles = $this->getDoctrine()
+            ->getRepository(Article::class)
+            ->findBy(['category' => $category], ['id'=>'desc']);
+
         return $this->render('category.html.twig', [
             'category' => $category,
+            'articles' => $articles,
         ]);
     }
 
