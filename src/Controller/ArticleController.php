@@ -40,7 +40,7 @@ class ArticleController extends AbstractController
         if(!$article)
             throw new NotFoundHttpException('Cet article n\'existe pas');
 
-        return $this->render('articles.html.twig', [
+        return $this->render('article.html.twig', [
             'article' => $article,
         ]);
     }

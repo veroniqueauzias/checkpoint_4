@@ -1,0 +1,11 @@
+<div class="cardsContainer flex">
+    {% for article in articles %}
+    <div class="card "style="width: 18rem;">
+        <img class="card-img-top" src="{{ article.picture}}" alt="Article image">
+        <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.content }}</p>
+            <a href="{{ path('article', {id:article.id}) }}" class="btn btn-primary">lire l'article</a>
+        </div>
+    </div>
+{% endfor %}
