@@ -1,20 +1,11 @@
 // customize some Bootstrap variables
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 $primary: darken(#428bca, 20%);
 $light: #5ebfe5;
+$font-family-base: 'Yusei Magic', sans-serif;
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
-
-#main {
-  position:relative;;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-top:50px;
-}
 
 .flex {
   display: flex;
@@ -34,6 +25,29 @@ footer {
 .cardsContainer{
   align-items:  center;
   flex-direction: column;
+  margin: 20px;
+}
+
+.articleContainer {
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  justify-content: center;
+}
+
+.articleImage {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.articleParagraph {
+  width: 40%;
+  margin: 40px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #a59c9c;
+
 }
 
 
@@ -52,6 +66,25 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 100px;
+  }
+
+  .articleContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+  }
+
+  .articleImage {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .articleParagraph {
+    font-size: 30px;
+
   }
 
 }
